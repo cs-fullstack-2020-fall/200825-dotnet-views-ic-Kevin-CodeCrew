@@ -1,0 +1,13 @@
+<h1>Movie Info</h1>
+
+@if (@ViewData["name"]!=null)
+{
+    <h2>Movie ID: @ViewData["id"]</h2>
+    <h2>Name: @ViewData["name"]</h2>
+    <h2>Genre: @ViewData["genre"]</h2>
+    <h2>Release Date: @ViewData["year"]</h2>
+}
+else
+{
+    <h2>Movie was not found for ID @ViewData["id"]</h2>
+}

@@ -1,0 +1,25 @@
+@model MovieRentals.ViewModels.MovieRentalDetailsModel;
+
+<h1>Movie Rental History</h1>
+
+    <h3>Movie ID: @Model.Movie.MovieId</h3>
+    <h2>Name: @Model.Movie.MovieName</h2>
+    <h3>Genre: @Model.Movie.MovieGenre</h3>
+    <h3>Release Date: @Model.Movie.ReleaseYear</h3>
+
+<h2>Customers</h2>
+    @foreach (Customer c in @Model.Customers)
+    {
+        <ul>
+        <li>
+            Customer ID: @c.CustomerId
+        </li>
+        <li>
+            Customer Name: @c.CustomerName
+        </li>
+        <li>
+            Premium Member? @c.PremiumMember
+        </li>
+
+        </ul>
+    }
